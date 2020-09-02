@@ -1,5 +1,15 @@
 'use strict'
 
+window.onload = function user() {
+    var call = (prompt('Please enter your name.'));
+        if (call.toUpperCase() == null || call == ""){
+            alert("You have cancelled the prompt.");
+        } else {
+        alert("Welcome " + call.toUpperCase()); 
+        document.getElementById("userName").innerHTML = call.toUpperCase(); 
+        } 
+    }
+
 /* var clickhandler = document.getElementById("first").onclick = function() {questionA()}; */
 function questionA() {
     var qOne = prompt('Where was I born?', 'Enter a location');
@@ -55,6 +65,3 @@ function questionE() {
         document.getElementById("fifthQuest").innerHTML = "Her name is ROSEY";
     }
 }
-
-var call = (prompt('Please enter your name'));
-alert("Welcome " + call.toUpperCase);
