@@ -59,7 +59,7 @@ function questionE() {
     var qFive = prompt('What is the name of my dog?');
     if (qFive.toUpperCase() == "ROSEY") {
         alert("correct");
-        document.getElementById("fifthQuest").innerHTML = "Yes! The name of my <del>baby</del> <em> dog</em> name is " + qFive.toUpperCase() + "&hearts;";
+        document.getElementById("fifthQuest").innerHTML = "Yes! The name of my <del>baby</del> <em> dog</em> is " + qFive.toUpperCase() + "&hearts;";
     } else {
         alert("incorrect");
         document.getElementById("fifthQuest").innerHTML = "Her name is ROSEY";
