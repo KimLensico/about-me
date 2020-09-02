@@ -12,56 +12,56 @@ window.onload = function user() {
 
 /* var clickhandler = document.getElementById("first").onclick = function() {questionA()}; */
 function questionA() {
-    var qOne = prompt('Where was I born?', 'Enter a location');
-        if (qOne.toUpperCase() == "WASHINGTON") {
+    var qOne = prompt('Was I born in Washington?');
+        if (qOne.toUpperCase() == "YES") {
             alert("correct");
-            document.getElementById("firstQuest").innerHTML = "Yes! I was born in " + qOne.toUpperCase();
+            document.getElementById("firstQuest").innerHTML = qOne.toUpperCase() + "! I was born in Washington." ;
         } else {
             alert("incorrect");
-            document.getElementById("firstQuest").innerHTML = "I was born in WASHINGTON";
+            document.getElementById("firstQuest").innerHTML = "INCORRECT: I was born in WASHINGTON";
             } 
     } 
 
 function questionB() {
-    var qTwo = prompt('Where is my family originally from?', 'Enter a place');
-    if (qTwo.toUpperCase() == "PHILIPPINES") {
+    var qTwo = prompt('Is my family from the states?');
+    if (qTwo.toUpperCase() == "NO") {
         alert("correct");
-        document.getElementById("secQuest").innerHTML = "Yes! I was born in " + qTwo;
+        document.getElementById("secQuest").innerHTML = qTwo + ", you're correct! My family originated from the PHILIPPINES";
     } else {
         alert("incorrect");
-        document.getElementById("secQuest").innerHTML = "My family was originally from the PHILIPPINES";
+        document.getElementById("secQuest").innerHTML = "INCORRECT: My family was originally from the PHILIPPINES";
     }
 }
 
 function questionC() {
-    var qThree = prompt('True/False: I am a third generation American citizen.');
-    if (qThree.toUpperCase() == "FALSE") {
+    var qThree = prompt('Am I a third generation American citizen?');
+    if (qThree.toUpperCase() == "NO") {
         alert("correct");
-        document.getElementById("thirdQuest").innerHTML = qThree + ": I am a first generation citizen";
+        document.getElementById("thirdQuest").innerHTML = qThree + ": I am a first generation citizen (correct!)";
     } else {
         alert("incorrect");
-        document.getElementById("thirdQuest").innerHTML = "I am a FIRST generation citizen";
+        document.getElementById("thirdQuest").innerHTML = "INCORRECT: I am a FIRST generation citizen";
     }
 } 
 
 function questionD() {
-    var qFour = prompt('Where do I plan on living in the future?');
-    if (qFour.toUpperCase() == "SEATTLE") {
+    var qFour = prompt('Do I plan on living in SEATTLE in the future');
+    if (qFour.toUpperCase() == "YES") {
         alert("correct");
-        document.getElementById("fourthQuest").innerHTML = "Right! I want to move to " + qFour.toUpperCase() + " one day and pursue a career in coding"; 
+        document.getElementById("fourthQuest").innerHTML = qFour.toUpperCase() + "! I want to move to SEATTLE in the future and pursue a career in coding"; 
     } else {
         alert("incorrect");
-        document.getElementById("fourthQuest").innerHTML = "I want to move to SEATTLE.";
+        document.getElementById("fourthQuest").innerHTML = "INCORRECT: I want to move to SEATTLE.";
     }
 }
 
 function questionE() { 
-    var qFive = prompt('What is the name of my dog?');
-    if (qFive.toUpperCase() == "ROSEY") {
+    var qFive = prompt('Is the name of my dog Rosey?');
+    if (qFive.toUpperCase() == "YES") {
         alert("correct");
-        document.getElementById("fifthQuest").innerHTML = "Yes! The name of my <del>baby</del> <em> dog</em> is " + qFive.toUpperCase() + "&hearts;";
+        document.getElementById("fifthQuest").innerHTML =  qFive.toUpperCase() + "! The name of my <del>baby</del> <em> dog</em> IS Rosey" + "&hearts;";
     } else {
         alert("incorrect");
-        document.getElementById("fifthQuest").innerHTML = "Her name is ROSEY";
+        document.getElementById("fifthQuest").innerHTML = "INCORRECT: Her name is ROSEY";
     }
 }
