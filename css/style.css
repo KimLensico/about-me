@@ -1,0 +1,56 @@
+body {
+    background: #d9bfb5;
+    font-family: calibri;
+    color: white;
+    position: fixed;
+    padding: 0%;
+    margin: 2% 25% 2%;
+    border: solid 50px #909cc4;
+       /*shadow credit: https://www.w3schools.com/css/css3_shadows_box.asp */
+    box-shadow: 0 4px 8px 0 #696969, 0 6px 15px 0 #696969;
+}
+
+main {
+    text-align: justify;
+    background: #ffffff;
+    padding: 5% 5% 2%;
+    margin: 0% 0% 0%;
+}
+
+h1 {
+    text-align: center;
+    background: #ffffff;
+    color: #909cc4;
+    overflow: auto;
+    display: block;
+    margin: 0%;
+    padding: 2% 0% 0%;
+}
+
+strong {
+    color: #8479a1;
+}
+
+#box {
+    overflow-y: auto;
+    min-width: 200px;
+    height: 150px;
+    direction: ltr;
+    text-align: left;
+    background: #fff;
+    color: #232653;
+    padding: 2% 2% 2%;
+    margin: 0% 0% 0%;
+    border: solid 1px#909cc4;
+}
+
+footer {
+    font-size: 12px;
+    font-family: calibri;
+    color: #232653;
+    background: #fff;
+    margin: 0%;
+    padding: 0% 0% 2%;
+    overflow: auto;
+    text-align: center;
+}
