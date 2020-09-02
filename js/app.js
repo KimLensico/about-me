@@ -34,7 +34,7 @@ function questionB() {
 }
 
 function questionC() {
-    var qThree = prompt('I am a third generation American citizen.');
+    var qThree = prompt('True/False: I am a third generation American citizen.');
     if (qThree.toUpperCase() == "FALSE") {
         alert("correct");
         document.getElementById("thirdQuest").innerHTML = qThree + ": I am a first generation citizen";
