@@ -15,7 +15,7 @@ function questionA() {
     var qOne = prompt('Was I born in Washington?');
         if (qOne.toUpperCase() == "YES") {
             alert("correct");
-            document.getElementById("firstQuest").innerHTML = qOne.toUpperCase() + "! I was born in Washington." ;
+            document.getElementById("firstQuest").innerHTML = qOne.toUpperCase() + "! I was born in Washington.";
         } else {
             alert("incorrect");
             document.getElementById("firstQuest").innerHTML = "INCORRECT: I was born in WASHINGTON";
