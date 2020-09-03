@@ -70,23 +70,23 @@ function questionE() {
 // this is the number game;
 function questionF() {
     var answ1 = 3;
-    var qSix = parseInt(prompt('Whats my favorite number? (Between 1-9)')); {
     for (var i = 0; i < 4; i++) {
+        var qSix = parseInt(prompt('Whats my favorite number? (Between 1-9)')); {
         if (qSix === answ1) {
-            alert('Woah! How did you know??');
+            alert('Woah! How did you know??')
+            break;
         } else if (qSix > answ1) {
             alert('Too high!');
-            document.getElementById("sixthQuest").innerHTML = "INCORRECT: Her name is ROSEY";
         } else if (qSix < answ1) {
          alert('Nope too low.');
-        } if (i === 4) {
+        } else {
+            alert('Please enter a number!!')
+        }
+        if (i === 3) {
             alert('You have used up all 4 guesses!');
-            alert('The answer is 3!');
-            document.getElementById("fifthQuest").innerHTML = "INCORRECT: Her name is ROSEY";
+            document.getElementById("sixthQuest").innerHTML = "My favorite number is 3";
         }
     }  
 }
 }
 
-// question seven goes here but i don't know where to start since we can't start with a function
-// definitely spending more time in remo tomorrow because i am overwhelmed
