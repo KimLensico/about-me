@@ -1,11 +1,13 @@
 body {
     background: #d9bfb5;
     font-family: calibri;
+    font-size: 14px;
     color: white;
     position: fixed;
-    padding: 0%;
+    color: #232653;
     margin: 2% 25% 2%;
     border: solid 50px #909cc4;
+    padding: 0%;
        /*shadow credit: https://www.w3schools.com/css/css3_shadows_box.asp */
     box-shadow: 0 4px 8px 0 #696969, 0 6px 15px 0 #696969;
 }
@@ -13,8 +15,26 @@ body {
 main {
     text-align: justify;
     background: #ffffff;
-    padding: 5% 5% 2%;
+    padding: 1% 5% 2%;
     margin: 0% 0% 0%;
+}
+
+ul > li {
+    margin: 0% 15% 0% 20%;
+}
+
+li span {
+    position: relative;
+    left: 5%;
+}
+
+/* credit for columns: https://stackoverflow.com/questions/43726696/splitting-list-of-items-in-two-columns-with-css */
+ol {
+    -webkit-columns: 5;
+        -moz-columns: 5;
+            columns: 5;
+    padding-left: 0;
+    font-size: 12px;
 }
 
 h1 {
@@ -37,8 +57,7 @@ strong {
     height: 150px;
     direction: ltr;
     text-align: left;
-    background: #fff;
-    color: #232653;
+    background: #ffffff;
     padding: 2% 2% 2%;
     margin: 0% 0% 0%;
     border: solid 1px#909cc4;
