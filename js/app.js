@@ -1,25 +1,34 @@
 'use strict'
 
-window.onload = function user() {
-    var call = (prompt('Please enter your name.'));
-        if (call.toUpperCase() == null || call == ""){
-            alert("You have cancelled the prompt.");
-        } else {
-        alert("Welcome " + call.toUpperCase()); 
-        document.getElementById("userName").innerHTML = call.toUpperCase(); 
-        } 
-}
+var correct = 0; 
 
+// window.onload = function user() {
+//     var call = (prompt('Please enter your name.'));
+//         if (call.toUpperCase() == null || call == ""){
+//             alert("You have cancelled the prompt.");
+//         } else {
+//         alert("Welcome " + call.toUpperCase()); 
+//         document.getElementById("userName").innerHTML = call.toUpperCase(); 
+//         } 
+// }
+
+function user() {
+        var call = (prompt('Please enter your name.'));
+            if (call == null || call == ""){
+                document.getElementById("userName").innerHTML = "GUEST";
+            } else {
+            document.getElementById("userName").innerHTML = call.toUpperCase(); 
+            } 
+    }
 
 /* var clickhandler = document.getElementById("first").onclick = function() {questionA()}; */
 function questionA() {
     var qOne = prompt('Was I born in Washington?');
-        if (qOne.toUpperCase() == "YES") {
+        if (qOne.toUpperCase() == "YES") { 
             alert("correct");
-            document.getElementById("firstQuest").innerHTML = qOne.toUpperCase() + "! I was born in Washington.";
+            correct++;
         } else {
             alert("incorrect");
-            document.getElementById("firstQuest").innerHTML = "INCORRECT: I was born in WASHINGTON";
             } 
     } 
 
@@ -27,10 +36,9 @@ function questionB() {
     var qTwo = prompt('Is my family from the states?');
     if (qTwo.toUpperCase() == "NO") {
         alert("correct");
-        document.getElementById("secQuest").innerHTML = qTwo + ", you're correct! My family originated from the PHILIPPINES";
+        correct++;
     } else {
         alert("incorrect");
-        document.getElementById("secQuest").innerHTML = "INCORRECT: My family was originally from the PHILIPPINES";
     }
 }
 
@@ -38,10 +46,9 @@ function questionC() {
     var qThree = prompt('Am I a third generation American citizen?');
     if (qThree.toUpperCase() == "NO") {
         alert("correct");
-        document.getElementById("thirdQuest").innerHTML = qThree + ": I am a first generation citizen (correct!)";
+        correct++;
     } else {
         alert("incorrect");
-        document.getElementById("thirdQuest").innerHTML = "INCORRECT: I am a FIRST generation citizen";
     }
 } 
 
@@ -49,10 +56,9 @@ function questionD() {
     var qFour = prompt('Do I plan on living in SEATTLE in the future');
     if (qFour.toUpperCase() == "YES") {
         alert("correct");
-        document.getElementById("fourthQuest").innerHTML = qFour.toUpperCase() + "! I want to move to SEATTLE in the future and pursue a career in coding"; 
+        correct++;
     } else {
         alert("incorrect");
-        document.getElementById("fourthQuest").innerHTML = "INCORRECT: I want to move to SEATTLE.";
     }
 }
 
@@ -60,10 +66,9 @@ function questionE() {
     var qFive = prompt('Is the name of my dog Rosey?');
     if (qFive.toUpperCase() == "YES") {
         alert("correct");
-        document.getElementById("fifthQuest").innerHTML =  qFive.toUpperCase() + "! The name of my <del>baby</del> <em> dog</em> IS Rosey" + "&hearts;";
+        correct++;
     } else {
         alert("incorrect");
-        document.getElementById("fifthQuest").innerHTML = "INCORRECT: Her name is ROSEY";
     }
 }
 
@@ -75,6 +80,7 @@ function questionF() {
         var qSix = parseInt(prompt('Whats my favorite number? (Between 1-9)'));
         if (qSix === answ1) {
             alert('Woah! How did you know??');
+            correct++;
             break;
         } else if (qSix > answ1) {
             alert('Too high!');
@@ -87,29 +93,78 @@ function questionF() {
             alert('You have used up all 4 guesses!');
 
             alert('The answer is 3!');
-            document.getElementById("sixthQuest").innerHTML = "My favorite number is 3";
         }
     }  
 }
 // what is my favorite icecream;
 function questionG() {
-    var ans = ["chocolate" , "vanilla" , "strawberry"];
+    var ans = ['chocolate' , 'matcha' , 'strawberry'];
 
     for (var flavor = 0; flavor < 6; flavor++) {
-       var guess = prompt("What are my favorite flavors of ice cream?");
-       console.log (guess);
-       for (var ans = 0; ans < flavor.length; j++) {
-           console.log(flavor);
-       if (guess === 5 && flavor[ans2]) {
+       var iceCream = prompt("What are my favorite flavors of ice cream?");
+       console.log (iceCream); 
+       var success = 0;
+
+       for (var i = 0; i < ans.length; i++) {
+           if (iceCream.toLowerCase() === ans[i]) {
+               correct++;
+               success++;
+               alert ('You earned a dollar menu sunday! 🍦');
+               break;
+           } 
+       } 
+        
+       if (success === 0) {
+           if (flavor === 5) {
+               alert("ANSWER: The BEST ice cream flavors are: CHOCOLATE, MATCHA, & STRAWBERRY~! 🍦");
+           } else {
+               alert ('DUN DUN DUN NO SUNDAY FOR YOU!');
+           } 
+           } else {
+               break;
+           }
+        }
     }
-       }
+
+// template code: ashley moore || shes gr8 go ask her for help bc she's cool
+
+// function born(){
+//     var answers = ["new york" , "california" , "nevada"]; 
+ 
+//     for (var guess = 0; guess < 6; guess++) {
+//         var locate = prompt("Can you guess at least one state that I have lived in?");
+//         console.log(locate);
+//         var success = 0;
+
+//         for (var i = 0; i < answers.length; i++) {
+//             if (locate.toLowerCase() === answers[i]){
+//                 correctAnswer++;
+//                 success++;
+//                 alert ("YES! You got it!");
+//                 break;
+//             } 
+//         }
+        
+//         if (success === 0){
+//             if (guess === 5){
+//                 alert ("The correct answers are: new york, california, nevada!");
+//             } else {
+//                 alert ("Sorry, keep guessing!");
+//             }
+//         } else {
+//             break;
+//         }
+//     }
+// }
+
+function master() {
+    user();
+    questionA();
+    questionB();
+    questionC();
+    questionD();
+    questionE();
+    questionF();
+    questionG(); 
+    document.getElementById("myQuiz").innerHTML = ': ' + ' YOU SCORED A ' + Math.round((correct / 6) * 100) + '% ON THE QUIZ!';
 }
-}
- user();
- questionA();
- questionB();
- questionC();
- questionD();
- questionE();
- questionF();
- questionG();
