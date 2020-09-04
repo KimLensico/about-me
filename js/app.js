@@ -69,11 +69,12 @@ function questionE() {
 
 // this is the number game;
 function questionF() {
-    var answ1 = 3;
-    var qSix = parseInt(prompt('Whats my favorite number? (Between 1-9)')); {
+    var answ1 = 3; 
     for (var i = 0; i < 4; i++) {
+        var qSix = parseInt(prompt('Whats my favorite number? (Between 1-9)'));
         if (qSix === answ1) {
             alert('Woah! How did you know??');
+            break;
         } else if (qSix > answ1) {
             alert('Too high!');
             document.getElementById("sixthQuest").innerHTML = "INCORRECT: Her name is ROSEY";
@@ -82,11 +83,31 @@ function questionF() {
         } if (i === 4) {
             alert('You have used up all 4 guesses!');
             alert('The answer is 3!');
-            document.getElementById("fifthQuest").innerHTML = "INCORRECT: Her name is ROSEY";
+            document.getElementById("sixthQuest").innerHTML = "INCORRECT: Her name is ROSEY";
         }
     }  
 }
+// what is my favorite icecream;
+function questionG() {
+    var ans = ["chocolate" , "vanilla" , "strawberry"];
+
+    for (var flavor = 0; flavor < 6; flavor++) {
+       var guess = prompt("What are my favorite flavors of ice cream?");
+       console.log (guess);
+       for (var ans = 0; ans < flavor.length; j++) {
+           console.log(flavor);
+       if (guess === 5 && flavor[ans2]) {
+    }
+       }
 }
+}
+ user();
+ questionA();
+ questionB();
+ questionC();
+ questionD();
+ questionE();
+ questionF();
+ questionG();
 
 // question seven goes here but i don't know where to start since we can't start with a function
-// definitely spending more time in remo tomorrow because i am overwhelmed
