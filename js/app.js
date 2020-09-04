@@ -107,9 +107,9 @@ function questionG() {
 
        for (var i = 0; i < ans.length; i++) {
            if (iceCream.toLowerCase() === ans[i]) {
+               alert ('You earned a dollar menu sunday! 🍦');
                correct++;
                success++;
-               alert ('You earned a dollar menu sunday! 🍦');
                break;
            } 
        } 
@@ -166,5 +166,5 @@ function master() {
     questionE();
     questionF();
     questionG(); 
-    document.getElementById("myQuiz").innerHTML = ': ' + ' YOU SCORED A ' + Math.round((correct / 6) * 100) + '% ON THE QUIZ! (' + correct + '/7)';
+    document.getElementById("myQuiz").innerHTML = ': ' + ' YOU SCORED A ' + Math.round((correct / 7) * 100) + '% ON THE QUIZ! (' + correct + '/7)';
 }
