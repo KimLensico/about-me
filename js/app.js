@@ -98,7 +98,7 @@ function questionF() {
 }
 // what is my favorite icecream;
 function questionG() {
-    var ans = ['chocolate' , 'matcha' , 'strawberry'];
+    var ans = ['chocolate' , 'matcha' , 'mocha'];
 
     for (var flavor = 0; flavor < 6; flavor++) {
        var iceCream = prompt("What are my favorite flavors of ice cream?");
@@ -116,7 +116,7 @@ function questionG() {
         
        if (success === 0) {
            if (flavor === 5) {
-               alert("ANSWER: The BEST ice cream flavors are: CHOCOLATE, MATCHA, & STRAWBERRY~! 🍦");
+               alert("ANSWER: The BEST ice cream flavors are: CHOCOLATE, MOCHA, & MATCHA~! 🍦");
            } else {
                alert ('DUN DUN DUN NO SUNDAY FOR YOU!');
            } 
@@ -166,5 +166,5 @@ function master() {
     questionE();
     questionF();
     questionG(); 
-    document.getElementById("myQuiz").innerHTML = ': ' + ' YOU SCORED A ' + Math.round((correct / 6) * 100) + '% ON THE QUIZ!';
+    document.getElementById("myQuiz").innerHTML = ': ' + ' YOU SCORED A ' + Math.round((correct / 6) * 100) + '% ON THE QUIZ! (' + correct + '/7)';
 }
